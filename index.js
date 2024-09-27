@@ -12,11 +12,11 @@ connectionToDatabase()
 app.get('/',(req,res)=>{
     res.json({
         message:"hello"
-    })
+    })  
 })
 
 app.use('/api/product', productRoutes)
-app.use('/uploads', express.static('uploads'));
+app.use('/public', express.static('public'));
 
 app.listen(PORT, ()=>{
     console.log(`server is running on port ${PORT}`)
