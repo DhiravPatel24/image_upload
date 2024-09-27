@@ -9,6 +9,11 @@ app.use(express.json());
 
 connectionToDatabase()
 
+app.get('/',(req,res)=>{
+    res.json({
+        message:"hello"
+    })
+})
 
 app.use('/api/product', productRoutes)
 app.use('/uploads', express.static('uploads'));
